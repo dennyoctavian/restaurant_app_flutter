@@ -35,8 +35,7 @@ class NotificationHelper {
       now.year,
       now.month,
       now.day,
-      13,
-      44,
+      11,
     );
     if (scheduledDate.isBefore(now)) {
       scheduledDate = scheduledDate.add(const Duration(days: 1));
