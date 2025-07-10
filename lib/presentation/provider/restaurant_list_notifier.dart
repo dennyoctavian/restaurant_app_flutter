@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:restaurant_app/data/interface/i_api_restaurant.dart';
 import 'package:restaurant_app/data/models/list_restaurant_response.dart';
-import 'package:restaurant_app/data/services/services.dart';
 
 class RestaurantListNotifier extends ChangeNotifier {
+  final IApiRestaurant apiRestaurant;
+
+  RestaurantListNotifier({required this.apiRestaurant});
   bool _isLoading = false;
   bool _isError = false;
   String _message = '';
@@ -17,7 +20,7 @@ class RestaurantListNotifier extends ChangeNotifier {
     _isLoading = true;
     notifyListeners();
 
-    final result = await ApiRestaurant.fetchListRestaurant();
+    final result = await apiRestaurant.fetchListRestaurant();
 
     if (result.error ?? false) {
       _isError = true;
@@ -35,7 +38,7 @@ class RestaurantListNotifier extends ChangeNotifier {
     _isLoading = true;
     notifyListeners();
 
-    final result = await ApiRestaurant.fetchSearchRestaurant(query: query);
+    final result = await apiRestaurant.fetchSearchRestaurant(query: query);
 
     if (result.error ?? false) {
       _isError = true;

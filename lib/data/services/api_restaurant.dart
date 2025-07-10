@@ -1,7 +1,8 @@
 part of 'services.dart';
 
-class ApiRestaurant {
-  static Future<ListRestaurantResponse> fetchListRestaurant() async {
+class ApiRestaurant implements IApiRestaurant {
+  @override
+  Future<ListRestaurantResponse> fetchListRestaurant() async {
     try {
       final response = await dioClient.dio.get('/list');
 
@@ -24,7 +25,8 @@ class ApiRestaurant {
     }
   }
 
-  static Future<ListRestaurantResponse> fetchSearchRestaurant({
+  @override
+  Future<ListRestaurantResponse> fetchSearchRestaurant({
     required String query,
   }) async {
     try {

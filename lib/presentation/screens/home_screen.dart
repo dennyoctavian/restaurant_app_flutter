@@ -23,7 +23,17 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("Restaurant App")),
+      appBar: AppBar(
+        title: Text("Restaurant App"),
+        actions: [
+          IconButton(
+            onPressed: () {
+              context.goNamed('settings');
+            },
+            icon: const Icon(Icons.settings),
+          ),
+        ],
+      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 24),
         child: Column(

@@ -1,5 +1,4 @@
 import 'package:go_router/go_router.dart';
-import 'package:restaurant_app/presentation/screens/favorite_screen.dart';
 import 'package:restaurant_app/presentation/screens/screens.dart';
 
 final router = GoRouter(
@@ -20,6 +19,11 @@ final router = GoRouter(
           name: 'favorite',
           path: '/favorite',
           builder: (context, state) => FavoriteScreen(),
+        ),
+        GoRoute(
+          name: 'settings',
+          path: '/settings',
+          builder: (context, state) => SettingsScreen(),
         ),
       ],
     ),

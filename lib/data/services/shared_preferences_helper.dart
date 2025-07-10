@@ -1,6 +1,6 @@
 part of 'services.dart';
 
-enum SharedPreferenceKey { idDarkMode }
+enum SharedPreferenceKey { idDarkMode, dialyReminder }
 
 class SharedPreferencesHelper {
   static SharedPreferences? _prefs;

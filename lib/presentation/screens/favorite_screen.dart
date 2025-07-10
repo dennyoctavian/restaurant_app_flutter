@@ -1,8 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import 'package:restaurant_app/presentation/extensions/extensions.dart';
-import 'package:restaurant_app/presentation/provider/favorite_restaurant_notifier.dart';
-import 'package:restaurant_app/presentation/widgets/widgets.dart';
+part of 'screens.dart';
 
 class FavoriteScreen extends StatefulWidget {
   const FavoriteScreen({super.key});
