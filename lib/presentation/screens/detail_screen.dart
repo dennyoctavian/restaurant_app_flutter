@@ -162,6 +162,18 @@ class _DetailScreenState extends State<DetailScreen> {
                       'https://restaurant-api.dicoding.dev/images/medium/${value.restaurant?.pictureId ?? ''}',
                       height: 300,
                       fit: BoxFit.cover,
+                      errorBuilder: (context, error, stackTrace) {
+                        return Container(
+                          height: 300,
+                          color: Colors.grey[300],
+                          alignment: Alignment.center,
+                          child: Icon(
+                            Icons.broken_image,
+                            color: Colors.grey[700],
+                            size: 64,
+                          ),
+                        );
+                      },
                     ),
                   ),
                   Padding(

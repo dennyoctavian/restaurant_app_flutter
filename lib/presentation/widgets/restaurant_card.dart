@@ -27,6 +27,18 @@ class RestaurantCard extends StatelessWidget {
                   'https://restaurant-api.dicoding.dev/images/medium/${restaurant.pictureId}',
                   height: 200,
                   fit: BoxFit.cover,
+                  errorBuilder: (context, error, stackTrace) {
+                    return Container(
+                      height: 300,
+                      color: Colors.grey[300],
+                      alignment: Alignment.center,
+                      child: Icon(
+                        Icons.broken_image,
+                        color: Colors.grey[700],
+                        size: 64,
+                      ),
+                    );
+                  },
                 ),
               ),
             ),
