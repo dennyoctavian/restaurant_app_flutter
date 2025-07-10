@@ -17,6 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
         listen: false,
       ).fetchListRestaurant();
     });
+    context.read<LocalNotificationProvider>().requestPermissions();
     super.initState();
   }
 

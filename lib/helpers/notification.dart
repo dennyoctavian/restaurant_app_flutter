@@ -1,5 +1,5 @@
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-import 'package:restaurant_app/main.dart';
+import 'package:restaurant_app/helpers/local_notification_service.dart';
 import 'package:timezone/timezone.dart' as tz;
 
 class NotificationHelper {
@@ -38,7 +38,7 @@ class NotificationHelper {
       11,
     );
     if (scheduledDate.isBefore(now)) {
-      scheduledDate = scheduledDate.add(const Duration(days: 1));
+      scheduledDate = scheduledDate.add(const Duration(days: 0));
     }
     return scheduledDate;
   }

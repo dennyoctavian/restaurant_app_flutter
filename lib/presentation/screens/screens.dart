@@ -8,6 +8,7 @@ import 'package:restaurant_app/data/services/services.dart';
 import 'package:restaurant_app/presentation/extensions/extensions.dart';
 import 'package:restaurant_app/presentation/provider/detail_restaurant_notifier.dart';
 import 'package:restaurant_app/presentation/provider/favorite_restaurant_notifier.dart';
+import 'package:restaurant_app/presentation/provider/local_notification_notifier.dart';
 import 'package:restaurant_app/presentation/provider/reminder_notifier.dart';
 import 'package:restaurant_app/presentation/provider/restaurant_list_notifier.dart';
 import 'package:restaurant_app/presentation/widgets/widgets.dart';
